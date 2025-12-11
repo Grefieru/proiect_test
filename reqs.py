@@ -9,6 +9,7 @@ api_key = os.getenv("API_KEY")
 
 url = "https://www.googleapis.com/youtube/v3/videos"
 
+#This function return the title and publishTime and can be saved in 2 variables.
 def get_tile_publish(id):
     params = {
         "id": str(id),
@@ -26,6 +27,7 @@ def get_tile_publish(id):
 
 titlu, uptime = get_tile_publish("8qioenyx4Go")
 
+#This function returns the title, likes, comments, as 3 variables.
 def get_stats(id):
 
     params = {
@@ -47,6 +49,17 @@ def get_stats(id):
 views, likes, comments = get_stats("8qioenyx4Go")
 
 print(f"The Video: {titlu}\n Publshed on: {uptime} has {views} views, {likes} likes and {comments} comments.")
+
+
+
+
+
+
+
+
+
+
+
 
 #print(json.dumps(my_rez, indent=4))
 #print(titlu, uptime)
